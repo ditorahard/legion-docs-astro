@@ -1,0 +1,11 @@
+---
+import react from 'react';
+import {Button as LgnButton} from 'legion-react';
+import 'legion-react/dist/style.css'
+
+
+const {children, ...rest} = Astro.props;
+---
+
+<LgnButton client:only="react" {...rest}>{children}</LgnButton>
+

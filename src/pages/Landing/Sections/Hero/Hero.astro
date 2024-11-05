@@ -1,0 +1,121 @@
+---
+import react from 'react'
+import { Button } from 'legion-react'
+---
+
+<section class="hero">
+    <div class="container hero-content">
+        <div class="hero-text">
+            <h1 class="hero-title">Start with Legion Design System</h1>
+            <p class="hero-description">Multi-Brand design system of Telkom Indonesia that supports designers & developers crafting products.</p>
+            <div class="hero-buttons">
+                <Button client:only="react" variant="outline">Mobile Playground</Button>
+                <Button client:only="react">Getting Started</Button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="file-item">
+                <div class="file-header">
+                    <div>
+                        <span class="file-type">MP3</span>
+                        <span class="file-name">My Podcast – Episode 1.mp3</span>
+                    </div>
+                    <span class="file-size">20 MB</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 100%;"></div>
+                </div>
+            </div>
+            <div class="file-item">
+                <div class="file-header">
+                    <div>
+                        <span class="file-type">MP3</span>
+                        <span class="file-name">My Podcast – Episode 2.mp3</span>
+                    </div>
+                    <span class="file-size">20 MB</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Hero section styles */
+		.hero {
+            padding: 4rem 0;
+        }
+    .hero-content {
+        display: flex;
+        gap: 2rem;
+    }
+    .hero-text {
+  
+        flex: 1;
+    }
+    .hero-title {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    .hero-description {
+        font-size: 1.125rem;
+        color: #6b7280;
+        margin-bottom: 2rem;
+    }
+    .hero-image {
+        flex: 1;
+        background-color: #f9fafb;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+    }
+    .file-item {
+        margin-bottom: 1rem;
+    }
+    .file-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+    .file-type {
+        background-color: #ddd6fe;
+        color: #7c3aed;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+    .file-name {
+        margin-left: 0.5rem;
+        font-size: 0.875rem;
+    }
+    .file-size {
+        font-size: 0.875rem;
+        color: #6b7280;
+    }
+    .progress-bar {
+        height: 8px;
+        background-color: #ddd6fe;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    .progress {
+        height: 100%;
+        background-color: #8b5cf6;
+    }
+
+      /* Responsive styles */
+  @media (max-width: 768px) {
+      .hero-content {
+          flex-direction: column;
+      }
+      .hero-title {
+          font-size: 2.5rem;
+      }
+		}
+</style>

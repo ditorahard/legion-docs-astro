@@ -902,6 +902,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nanostores/react@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "@nanostores/react@npm:0.8.0"
+  peerDependencies:
+    nanostores: ^0.9.0 || ^0.10.0 || ^0.11.0
+    react: ">=18.0.0"
+  checksum: f9a5d7803e7db072b97307697b77e8033a5f8cd7a64ccfa3b484f4ab1e6916cbf5855d16f98829eff41487277d31da3ca78130e046b41670f52ad610749c4774
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -3123,10 +3133,12 @@ __metadata:
     "@astrojs/check": ^0.9.4
     "@astrojs/mdx": ^3.1.9
     "@astrojs/react": ^3.6.2
+    "@nanostores/react": ^0.8.0
     "@types/react": ^18.3.12
     "@types/react-dom": ^18.3.1
     astro: ^4.16.8
     legion-react: ^1.0.0
+    nanostores: ^0.11.3
     react: ^18.3.1
     react-dom: ^18.3.1
     typescript: ^5.6.3
@@ -4096,6 +4108,13 @@ __metadata:
   bin:
     nanoid: bin/nanoid.cjs
   checksum: d36c427e530713e4ac6567d488b489a36582ef89da1d6d4e3b87eded11eb10d7042a877958c6f104929809b2ab0bafa17652b076cdf84324aa75b30b722204f2
+  languageName: node
+  linkType: hard
+
+"nanostores@npm:^0.11.3":
+  version: 0.11.3
+  resolution: "nanostores@npm:0.11.3"
+  checksum: 1db758d3910cf74191327fba0556d5666ef53085bb4822c6bb0f1d7200a457e229530de63f9b11c251c427c88e5efc028f4fc0f37203f49adf95fcb5125e0637
   languageName: node
   linkType: hard
 

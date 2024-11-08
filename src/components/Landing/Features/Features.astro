@@ -1,0 +1,189 @@
+---
+import { Button } from "legion-react"
+---
+
+<div class="landing-page">
+    <!-- Feature Section -->
+    <section class="feature-section">
+      <div class="container">
+        <div class="feature-content">
+          <div class="feature-image">
+            <img src="/placeholder.svg" alt="Template interface illustration" />
+          </div>
+          <div class="feature-text">
+            <h2>Check out all the template options</h2>
+            <p>Find and use thousand option of pattern or template for your products make it better</p>
+            <Button client:only="react">Learn More Details</Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Explore Section -->
+    <section class="explore-section">
+      <div class="container">
+        <div class="explore-header">
+          <h2>Explore the outstanding features of Legion.</h2>
+          <p>Manage all aspects of your effort easily and efficiently using Legion Design System. Everything is integrated into one platform.</p>
+        </div>
+        
+        <div class="explore-grid">
+          <div class="explore-item">
+            <h3>100+ Component Cross Platform</h3>
+            <p>Component for design and development</p>
+            <div class="image-placeholder"></div>
+          </div>
+  
+          <div class="explore-item">
+            <h3>10+ Multi-Brand Theme Style</h3>
+            <p>Library of product theme or style</p>
+            <div class="image-placeholder"></div>
+          </div>
+  
+          <div class="explore-item">
+            <h3>50+ Multi platform pattern & template</h3>
+            <p>Many template options for your practice</p>
+            <div class="image-placeholder"></div>
+          </div>
+  
+          <div class="explore-item">
+            <h3>Support playground apps</h3>
+            <p>Preview of asset legion design system in mobile native android & iOS</p>
+            <div class="image-placeholder"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <style>
+
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  
+    /* Feature Section Styles */
+    .feature-section {
+      padding: 80px 0;
+    }
+  
+    .feature-content {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+  
+    .feature-image {
+      flex: 1;
+    }
+  
+    .feature-image img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .feature-text {
+      flex: 1;
+    }
+  
+    .feature-text h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  
+    .feature-text p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 30px;
+    }
+  
+    .learn-more-btn {
+      background-color: #7C3AED;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    .learn-more-btn:hover {
+      background-color: #6D28D9;
+    }
+  
+    /* Explore Section Styles */
+    .explore-section {
+      background-color: #F9FAFB;
+      padding: 80px 0;
+    }
+  
+    .explore-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 60px;
+    }
+  
+    .explore-header h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  
+    .explore-header p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+  
+    .explore-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+  
+    .explore-item {
+      background-color: white;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .explore-item h3 {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    .explore-item p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+  
+    .image-placeholder {
+      background-color: #E5E7EB;
+      width: 100%;
+      height: 200px;
+      border-radius: 8px;
+    }
+  
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .feature-content {
+        flex-direction: column;
+      }
+  
+      .feature-image, .feature-text {
+        flex: none;
+        width: 100%;
+      }
+  
+      .explore-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>

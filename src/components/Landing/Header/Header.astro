@@ -1,0 +1,44 @@
+---
+import { Button } from 'legion-react'
+import 'legion-react/dist/style.css'
+
+import Navbar from '../../Navbar/Navbar.astro';
+import Hero from '../Hero/Hero.astro';
+import {Modal} from 'legion-react'
+
+---
+
+<script>
+    import { isModalOpen } from '../../../pages/Landing/store.js';
+
+    // Set the store to true when the button is clicked
+    function openDialog() {
+        isModalOpen.set(true);
+    }
+
+    // Add an event listener to the button
+    const openModalButton = document.getElementById('openModal');
+    if (openModalButton) {
+        openModalButton.addEventListener('click', openDialog);
+    }
+
+</script>
+
+<header>
+    <Navbar />
+    <Hero />
+    <Button id="openModal" client:only="react" onClick={()=> isModalOpen.set(!isModalOpen)}>onClick</Button>
+    <Modal id="haloModal" client:only="react" isOpen={false}>
+        Halo
+    </Modal>
+</header>	
+
+
+<style>	
+	* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+      
+</style>

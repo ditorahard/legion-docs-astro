@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Sidebar from '../../components/Sidebar/Sidebar.astro';
+import Navbar from '../../components/Navbar/Navbar.astro';
+
+const docs = [
+    { title: 'Introduction', link: '/docs/introduction' },
+    { title: 'Getting Started', link: '/docs/getting-started' },
+    { title: 'Components', link: '/docs/components' },
+    { title: 'Utilities', link: '/docs/utilities' },
+];
+---
+
+<Layout title='Legion design system'>
+    <Navbar />
+    <Sidebar items={docs} />
+        <h1>Design System Documentation</h1>
+        <p>Welcome to the design system documentation. Here you will find all the information you need to get started and use our design system effectively.</p>
+</Layout>

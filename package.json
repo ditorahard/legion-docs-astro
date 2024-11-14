@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
+    "@astrojs/markdoc": "^0.11.5",
     "@astrojs/mdx": "^3.1.9",
     "@astrojs/react": "^3.6.2",
+    "@keystatic/astro": "^5.0.3",
+    "@keystatic/core": "^0.5.39",
     "@nanostores/react": "^0.8.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",

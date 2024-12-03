@@ -4,7 +4,7 @@ import TableOfContents from '../components/TableOfContents/TableOfContents.astro
 
 const { frontmatter, headings } = Astro.props;
 
-const toc = headings.map((heading) => ({
+const toc = headings.map((heading: { depth: number; text: string; slug: string }) => ({
   depth: heading.depth,
   text: heading.text,
   slug: heading.slug

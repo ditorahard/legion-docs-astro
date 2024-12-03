@@ -1,0 +1,83 @@
+---
+import Layout from './Layout2.astro';
+import TableOfContents from '../components/TableOfContents/TableOfContents.astro';
+
+const { frontmatter, headings } = Astro.props;
+
+const toc = headings.map((heading) => ({
+  depth: heading.depth,
+  text: heading.text,
+  slug: heading.slug
+}));
+---
+
+<Layout title={frontmatter.title}>
+  <div class="docs-container">
+    <main class="docs-content">
+      <slot />
+    </main>
+    <aside class="docs-toc">
+      <table-of-contents>
+        <TableOfContents toc={toc} />
+      </table-of-contents>
+    </aside>
+  </div>
+</Layout>
+
+<style>
+  .docs-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+  }
+
+  .docs-content {
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .docs-content :global(h1) {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #1a1b1e;
+    scroll-margin-top: 100px;
+  }
+
+  .docs-content :global(h2) {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+    color: #1a1b1e;
+    scroll-margin-top: 100px;
+  }
+
+  .docs-content :global(h3) {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1.5rem 0 1rem;
+    color: #1a1b1e;
+    scroll-margin-top: 100px;
+  }
+
+  .docs-content :global(p) {
+    margin: 1rem 0;
+    line-height: 1.6;
+    color: #495057;
+  }
+
+  @media (max-width: 768px) {
+    .docs-container {
+      grid-template-columns: 1fr;
+    }
+
+    .docs-toc {
+      display: none;
+    }
+  }
+</style>

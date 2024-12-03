@@ -24,5 +24,23 @@ export default config({
         }),
       },
     }),
+    components: collection({
+      label: 'React Components',
+      slugField: 'component',
+      path: 'src/content/react-components/*',
+      format: { contentField: 'content' },
+      schema: {
+        component: fields.slug({ name: { label: 'Component (React)' } }),
+        content: fields.markdoc({
+          label: 'Content',
+          options: {
+            image:{
+                publicPath:'src/content/react-components/',
+                directory:'src/content/react-components/'
+            }
+          }
+        }),
+      },
+    }),
   },
 });

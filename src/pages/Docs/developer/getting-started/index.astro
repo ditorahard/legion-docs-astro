@@ -1,0 +1,12 @@
+---
+import { getEntry } from 'astro:content'
+import Layout2 from '../../../../layouts/Layout2.astro';
+
+const post = await getEntry('posts', 'getting-started')
+const { Content } = await post.render()
+---
+
+<Layout2 title='Legion design system'>
+  <Content />
+
+</Layout2>

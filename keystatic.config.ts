@@ -64,7 +64,25 @@ export default config({
     //   },
     // }),
 
-    
+    designerGettingStarted: collection({
+      label: 'Designer - Getting Started',
+      slugField: 'title',
+      path: 'src/content/designer/getting-started/*',
+      format: { contentField: 'content' },
+      schema: {
+        title: fields.slug({ name: { label: 'Title' } }),
+        content: fields.markdoc({
+          label: 'Content',
+          options: {
+            image:{
+                publicPath:'src/content/designer/getting-started/',
+                directory:'src/content/designer/getting-started/'
+            }
+          }
+        }),
+      },
+    }),
+
     designerFoundations: collection({
       label: 'Designer - Foundations',
       slugField: 'title',

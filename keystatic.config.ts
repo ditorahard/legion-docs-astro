@@ -63,6 +63,8 @@ export default config({
     //     }),
     //   },
     // }),
+
+    
     designerFoundations: collection({
       label: 'Designer - Foundations',
       slugField: 'title',

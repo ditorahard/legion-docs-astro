@@ -159,7 +159,7 @@ export default config({
       },
     }),
     vueGettingStarted: collection({
-      label: 'Vue Getting Started',
+      label: 'Vue - Getting Started',
       path: 'src/content/developer/vue/getting-started/*',
       slugField: 'title',
       format: { contentField: 'content' },
@@ -170,8 +170,46 @@ export default config({
           label: 'Content',
           options: {
             image: {
-              publicPath: '/src/content/developer/vue/getting-started',
-              directory: 'src/content/developer/vue/getting-started'
+              publicPath: '/src/content/developer/vue/getting-started/',
+              directory: 'src/content/developer/vue/getting-started/'
+            }
+          }
+        }),
+      },
+    }),
+    vueComponents: collection({
+      label: 'Vue - Components',
+      path: 'src/content/developer/vue/components/*',
+      slugField: 'component',
+      format: { contentField: 'content' },
+      schema: {
+        component: fields.slug({ name: { label: 'Component (Vue)' } }),
+        description: fields.text({ label: 'Description' }),
+        content: fields.markdoc({
+          label: 'Content',
+          options: {
+            image: {
+              publicPath: '/src/content/developer/vue/components/',
+              directory: 'src/content/developer/vue/components/'
+            }
+          }
+        }),
+      },
+    }),
+    vuePatterns: collection({
+      label: 'Vue - Patterns',
+      path: 'src/content/developer/vue/getting-started/*',
+      slugField: 'pattern',
+      format: { contentField: 'content' },
+      schema: {
+        pattern: fields.slug({ name: { label: 'Pattern (Vue)' } }),
+        description: fields.text({ label: 'Description' }),
+        content: fields.markdoc({
+          label: 'Content',
+          options: {
+            image: {
+              publicPath: '/src/content/developer/vue/patterns/',
+              directory: 'src/content/developer/vue/patterns/'
             }
           }
         }),

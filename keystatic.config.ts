@@ -63,7 +63,6 @@ export default config({
     //     }),
     //   },
     // }),
-
     designerGettingStarted: collection({
       label: 'Designer - Getting Started',
       slugField: 'title',
@@ -230,6 +229,63 @@ export default config({
             image: {
               publicPath: '/src/content/developer/vue/patterns/',
               directory: 'src/content/developer/vue/patterns/'
+            }
+          }
+        }),
+      },
+    }),
+    reactNativeGettingStarted: collection({
+      label: 'React Native - Getting Started',
+      slugField: 'title',
+      path: 'src/content/developer/react-native/getting-started/*',
+      format: { contentField: 'content' },
+      schema: {
+        title: fields.slug({ name: { label: 'Title' } }),
+        description: fields.text({ label: 'Description' }),
+        content: fields.markdoc({
+          label: 'Content',
+          options: {
+            image:{
+                publicPath:'src/content/developer/react-native/getting-started/',
+                directory:'src/content/developer/react-native/getting-started/'
+            }
+          }
+        }),
+      },
+    }),
+    reactNativeComponents: collection({
+      label: 'React Native - Components',
+      slugField: 'component',
+      path: 'src/content/developer/react-native/components/*',
+      format: { contentField: 'content' },
+      schema: {
+        component: fields.slug({ name: { label: 'Component (React Native)' } }),
+        description: fields.text({ label: 'Description' }),
+        content: fields.markdoc({
+          label: 'Content',
+          options: {
+            image:{
+                publicPath:'src/content/developer/react-native/components/',
+                directory:'src/content/developer/react-native/components/'
+            }
+          }
+        }),
+      },
+    }),
+    reactNativePatterns: collection({
+      label: 'React Native - Patterns',
+      slugField: 'pattern',
+      path: 'src/content/developer/react-native/patterns/*',
+      format: { contentField: 'content' },
+      schema: {
+        pattern: fields.slug({ name: { label: 'Pattern (React Native)' } }),
+        description: fields.text({ label: 'Description' }),
+        content: fields.markdoc({
+          label: 'Content',
+          options: {
+            image:{
+                publicPath:'src/content/developer/react-native/patterns/',
+                directory:'src/content/developer/react-native/patterns/'
             }
           }
         }),

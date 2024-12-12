@@ -1,0 +1,20 @@
+---
+import { getEntryBySlug } from 'astro:content';
+
+const { library, component } = Astro.params;
+
+// Construct the content path
+const slug = `${library}/components/${component}`;
+const content = await getEntryBySlug('developer', slug);
+
+if (!content) {
+  throw Astro.redirect('/404'); // Handle missing content
+}
+---
+
+<html>
+  <body>
+    <h1>{content.data.title}</h1>
+    <div innerHTML={content.body}></div>
+  </body>
+</html>

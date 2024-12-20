@@ -9,19 +9,18 @@ import {Modal} from 'legion-react'
 ---
 
 <script>
-    import { isModalOpen } from '../../../pages/Landing/store.js';
 
+import { isModalOpen } from '../../../pages/_landing/store.js';
     // Set the store to true when the button is clicked
-    function openDialog() {
-        isModalOpen.set(true);
-    }
+function openDialog() {
+    isModalOpen.set(true);
+}
 
-    // Add an event listener to the button
-    const openModalButton = document.getElementById('openModal');
-    if (openModalButton) {
-        openModalButton.addEventListener('click', openDialog);
-    }
-
+// Add an event listener to the button
+const openModalButton = document.getElementById('openModal');
+if (openModalButton) {
+    openModalButton.addEventListener('click', openDialog);
+}
 </script>
 
 <header>

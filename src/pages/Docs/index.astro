@@ -13,10 +13,13 @@ const docs = [
     { title: 'Utilities', link: '/docs/utilities' },
 ];
 
-const posts = await getCollection('posts')
+const posts = await getCollection('posts');
+console.log("posts", posts);
+const developer = await getCollection('developer');
+console.log("developer", developer);
 ---
 
-<Layout2 title='Legion design system'>
+<Layout2 title='Legion design system' developer={developer}>
     <!-- <Navbar />
     <Sidebar items={docs} componentsLink={posts} /> -->
         <h1>Design System Documentation</h1>
